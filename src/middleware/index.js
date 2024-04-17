@@ -13,7 +13,7 @@ setInterval(() => {
 }, interval);
 
 // Middleware function for rate limiting and timeout handling
-export function rateLimitAndTimeout(req, res, next) {
+export default function rateLimitAndTimeout(req, res, next) {
   const ip = req.ip; // Get client IP address
 
   // Update request count for the current IP

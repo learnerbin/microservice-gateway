@@ -1,10 +1,10 @@
 import express from "express";
 import helmet from "helmet";
 import morgan from "morgan";
-import cors from "corse";
+import cors from "cors";
 import { createProxyMiddleware } from "http-proxy-middleware";
 
-import services from "./config/index.js";
+import { services } from "./config/index.js";
 import rateLimitAndTimeout from "./middleware/index.js";
 // Create an instance of Express app
 const app = express();
