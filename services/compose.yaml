@@ -4,7 +4,7 @@ services:
   auth-service:
     build:
       context: ./auth-service
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     ports:
       - 3001:3001
 
@@ -25,6 +25,6 @@ services:
   user-service:
     build:
       context: ./users-service
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     ports:
       - 3004:3004
