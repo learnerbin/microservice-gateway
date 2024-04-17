@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  auth-service:
+    build:
+      context: ./auth-service
+      dockerfile: dockerfile
+    ports:
+      - 3001:3001
+
+  chat-service:
+    build:
+      context: ./chats-service
+      dockerfile: Dockerfile
+    ports:
+      - 3002:3002
+
+  payment-service:
+    build:
+      context: ./payment-service
+      dockerfile: Dockerfile
+    ports:
+      - 3003:3003
+
+  user-service:
+    build:
+      context: ./users-service
+      dockerfile: dockerfile
+    ports:
+      - 3004:3004
